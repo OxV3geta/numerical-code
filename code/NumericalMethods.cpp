@@ -26,6 +26,8 @@ std::vector<DataPoint> NumericalSolver::solveHeun(Func f, ExactFunc exact, doubl
     double y = y0;
 
     results.push_back({t, y, exact(t), std::abs(y - exact(t))});
+ 
+// part 1 
 
     while (t < tend) {
         // 1. Predictor (Euler step)
@@ -67,3 +69,5 @@ std::vector<DataPoint> NumericalSolver::solveMidpoint(Func f, ExactFunc exact, d
     }
     return results;
 }
+
+// part 2

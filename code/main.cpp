@@ -21,6 +21,8 @@ int main() {
     auto eulerData = NumericalSolver::solveEuler(ODEProblems::test_derivative, ODEProblems::test_exact, y0, t0, tend, h_default);
     auto heunData = NumericalSolver::solveHeun(ODEProblems::test_derivative, ODEProblems::test_exact, y0, t0, tend, h_default);
     auto midData = NumericalSolver::solveMidpoint(ODEProblems::test_derivative, ODEProblems::test_exact, y0, t0, tend, h_default);
+    
+    // part 1 
 
     // 3. SAVE DATA FOR PLOTTING
     // Ensure the 'results' folder exists or path is correct
@@ -35,6 +37,8 @@ int main() {
     std::vector<std::pair<double, double>> eulerErrors;
     std::vector<std::pair<double, double>> heunErrors;
     std::vector<std::pair<double, double>> midErrors;
+
+    //part 2
 
     for (double h : stepSizes) {
         // Get results for this step size
@@ -56,3 +60,5 @@ int main() {
 
     return 0;
 }
+
+//part 3
