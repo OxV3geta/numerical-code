@@ -1,3 +1,5 @@
+// part 1 
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -22,7 +24,7 @@ int main() {
     auto heunData = NumericalSolver::solveHeun(ODEProblems::test_derivative, ODEProblems::test_exact, y0, t0, tend, h_default);
     auto midData = NumericalSolver::solveMidpoint(ODEProblems::test_derivative, ODEProblems::test_exact, y0, t0, tend, h_default);
     
-    // part 1 
+    // part 2
 
     // 3. SAVE DATA FOR PLOTTING
     // Ensure the 'results' folder exists or path is correct
@@ -38,7 +40,7 @@ int main() {
     std::vector<std::pair<double, double>> heunErrors;
     std::vector<std::pair<double, double>> midErrors;
 
-    //part 2
+    //part 3
 
     for (double h : stepSizes) {
         // Get results for this step size
